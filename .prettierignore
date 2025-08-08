@@ -1,0 +1,7 @@
+node_modules
+dist
+public
+*.lock
+*.log
+coverage
+.env*.local
