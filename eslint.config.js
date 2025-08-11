@@ -1,7 +1,6 @@
 import js from '@eslint/js';
 import vuePlugin from 'eslint-plugin-vue';
 import globals from 'globals';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 export default [
   js.configs.recommended,
@@ -12,6 +11,7 @@ export default [
       '**/node_modules/**',
       'dist/**',
       'public/**',
+			'src/assets/**',
     ],
   },
 	{
@@ -24,7 +24,7 @@ export default [
 	// 配置全局变量, 告诉 eslint 去掉对应全局变量得报错
   {
     languageOptions: {
-      globals: {
+			globals: {
 				// 浏览器默认变量 比如 console
         ...globals.browser,
 				// node 默认变量 比如 process
@@ -65,6 +65,4 @@ export default [
 			'vue/max-attributes-per-line': 'off',
     },
   },
-	 // prettier 配置
-  eslintPluginPrettierRecommended,
-]
+];
